@@ -4,10 +4,16 @@ class Movie():
                 , movie_title
                 , movie_storyline
                 , poster_image
+                , year
+                , type
+                , rate
                 , trailer_youtube):
        self.title = movie_title
        self.storyline = movie_storyline
        self.poster_image_url = poster_image
+       self.year = year
+       self.type = type
+       self.rate = rate
        self.trailer_youtube_url = trailer_youtube
 
    def show_trailer(self):

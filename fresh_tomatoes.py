@@ -58,6 +58,11 @@ main_page_head = '''
             color: black;
         }
 
+        .list-group {
+            border-radius: 4px;
+            -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.075);
+            box-shadow: 10px 8px 12px 0px rgba(19, 7, 7, 0.075);
+        }
         .navbar-static-top, .navbar-fixed-top, .navbar-fixed-bottom {
             border-radius: 0;
             background-color: azure;
@@ -130,8 +135,15 @@ main_page_content = '''
 # A single movie entry html template
 movie_tile_content = '''
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer" label="{movie_title}">
+    <div class="list-group">
     <img src="{poster_image_url}" width="220" height="342">
-    <h2>{movie_title}</h2>
+      <a href="#" class="list-group-item">
+        <h4 class="list-group-item-heading">{movie_title}</h4>
+        <p class="list-group-item-text">{year}</p>
+        <p class="list-group-item-text">{type}</p>
+        <p class="list-group-item-text">{rate}</p>
+      </a>
+    </div>
 </div>
 '''
 
@@ -148,6 +160,9 @@ def create_movie_tiles_content(movies):
         content += movie_tile_content.format(
             movie_title=movie.title,
             poster_image_url=movie.poster_image_url,
+            year=movie.year,
+            type=movie.type,
+            rate=movie.rate,
             trailer_youtube_id=trailer_youtube_id
         )
     return content
