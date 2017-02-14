@@ -1,5 +1,6 @@
 import media
 import fresh_tomatoes
+
 beetlejuice = media.Movie("Beetlejuice"
                     , "Early Tim Burton is creepy, dark fun for tweens and teens."
                     , "https://images-na.ssl-images-amazon.com/images/M/MV5BMTUwODE3MDE0MV5BMl5BanBnXkFtZTgwNTk1MjI4MzE@._V1_SY1000_CR0,0,675,1000_AL_.jpg"
@@ -48,6 +49,16 @@ rings = media.Movie("Rings"
                     , "4.5/10"
                     , "https://youtu.be/uukQ_6szDm8")
 
-movies =[beetlejuice,john_wick,labyrinth,resident_evil,xXx,rings]
+stranger_things = media.Serie("Stranger Things"
+                    , "This thrilling Netflix-original drama stars award-winning actress Winona Ryder as Joyce Byers, who lives in a small Indiana town in 1983 -- inspired by a time when tales of science fiction captivated audiences. When Joyce's 12-year-old son, Will, goes missing, she launches a terrifying investigation into his disappearance with local authorities. As they search for answers, they unravel a series of extraordinary mysteries involving secret government experiments, unnerving supernatural forces, and a very unusual little girl."
+                    , "https://images-na.ssl-images-amazon.com/images/M/MV5BMjEzMDAxOTUyMV5BMl5BanBnXkFtZTgwNzAxMzYzOTE@._V1_.jpg"
+                    , "2017"
+                    , "Science Fiction, Supernatural fiction, Horror fiction, Mystery, Historical period drama"
+                    , "9/10"
+                    , "https://youtu.be/XWxyRG_tckY"
+                    , 8)
+
+#Create list of movies and series#
+movies =[beetlejuice,john_wick,labyrinth,resident_evil,xXx,rings,stranger_things]
 
 fresh_tomatoes.open_movies_page(movies)
