@@ -1,6 +1,7 @@
 import media
 import fresh_tomatoes
 
+
 beetlejuice = media.Movie("Beetlejuice"
                     , "Early Tim Burton is creepy, dark fun for tweens and teens."
                     , "https://images-na.ssl-images-amazon.com/images/M/MV5BMTUwODE3MDE0MV5BMl5BanBnXkFtZTgwNTk1MjI4MzE@._V1_SY1000_CR0,0,675,1000_AL_.jpg"
@@ -58,7 +59,7 @@ stranger_things = media.Serie("Stranger Things"
                     , "https://youtu.be/XWxyRG_tckY"
                     , 8)
 
-#Create list of movies and series#
+
 movies =[beetlejuice,john_wick,labyrinth,resident_evil,xXx,rings,stranger_things]
 
 fresh_tomatoes.open_movies_page(movies)

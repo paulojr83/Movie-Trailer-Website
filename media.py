@@ -1,7 +1,10 @@
 import  webbrowser
-
 #Create Movie object#
 class Movie():
+   """
+   Create Movie object
+   init the input arguments for Movie
+   """
    def __init__(self
                 , movie_title
                 , movie_storyline
@@ -19,8 +22,12 @@ class Movie():
        self.trailer_youtube_url = trailer_youtube
 
 
-#Create serie object#
+
 class Serie(Movie):
+    """
+    Create serie object
+    init the input arguments for serie
+    """
     def __init__(self
                  , movie_title
                  , movie_storyline
@@ -30,7 +37,7 @@ class Serie(Movie):
                  , rate
                  , trailer_youtube
                  , episodes):
-        #Inheritance from Movie#
+        """inheritance from Movie to Serie class"""
         Movie.__init__(self
                 , movie_title
                 , movie_storyline
@@ -40,7 +47,11 @@ class Serie(Movie):
                 , rate
                 , trailer_youtube)
         self.episodes = episodes
+pass
 
-    #Method to open browser and show trailer of movie or serie#
-    def show_trailer(self):
-        webbrowser.open(self.trailer_youtube_url)
+
+def show_trailer(self):
+    """
+    Method to open browser and show trailer of movie or serie
+    """
+    webbrowser.open(self.trailer_youtube_url)
